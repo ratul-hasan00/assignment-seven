@@ -3,7 +3,7 @@ import vector_1 from '../assets/vector_1.png'
 
 const ProgressResolved = () => {
     return (
-        <div className='flex justify-around mt-10'>
+            <div className='flex justify-between max-w-[1250px] mx-auto mt-10'>
             <div className='flex justify-between w-lg h-[200px] bg-gradient-to-r from-[#632ee3] to-[#9f62f2] rounded-2xl'>
                 <img className='w-50 h-50' src={vector_1} alt="" />
                 <div className='text-center text-white mt-15'>

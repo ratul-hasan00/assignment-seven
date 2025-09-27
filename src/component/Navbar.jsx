@@ -2,9 +2,10 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className='flex justify-between items-center max-w-[1250px] mx-auto mt-3 pb-2 shadow-xs px-2'>
+        <div className='shadow-xs'>
+            <div className='flex justify-between items-center max-w-[1250px] mx-auto mt-3 pb-2  px-2'>
           <div>
-              <h1 className='text-2xl font-bold'>CS — Ticket System</h1>
+              <h1 className='text-3xl font-bold'>CS — Ticket System</h1>
           </div>
 
         <div className='flex items-center gap-4'>
@@ -19,6 +20,8 @@ const Navbar = () => {
             <button className='px-4 py-2 bg-gradient-to-r from-[#632ee3] to-[#9f62f2] text-white'>+ New Ticket</button>
         </div>
       </div>
+        </div>
+        
     );
 };
 

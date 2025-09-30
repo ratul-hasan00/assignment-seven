@@ -1,0 +1,43 @@
+@media screen and (max-width: 576px){
+    .card-container{
+        display: block;
+    }
+    .card-cards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-left:10px ;
+        gap: 15px;
+    }
+    .card-card{
+        width: 340px;
+        
+    }
+    .cards-title{
+        font-size: 15px;
+    }
+    .cards-img{
+        height: 10px;
+        width: 10px;
+    }
+    .cards-status-text{
+        font-size: 12px;
+    }
+    .cards-description{
+        font-size: 12px;
+    }
+    .cards-priority{
+        font-size: 12px;
+        gap: 10px;
+    }
+    .cards-img-date{
+        height: 15px;
+        width: 15px;
+    }
+    .customer-ticket{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .progress-div{
+        margin-left: 20px;
+    }
+}

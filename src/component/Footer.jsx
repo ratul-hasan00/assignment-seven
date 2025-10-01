@@ -38,12 +38,15 @@ const Footer = () => {
                     <li>Join Us</li>
                 </ul>
             </div>
-            <div className='margin-buttom'>
+            <div className='margin-buttom '>
                 <h1 className='text-white text-2xl font-semibold footer-description'>Social Links</h1>
-                <div className='flex gap-2 items-center mt-2 footer-text'><img className='h-[15px] bg-white rounded-full' src={x} alt="X logo"/><p className='text-[#a1a1aa] text-sm'>@CS — Ticket System</p></div>
-                <div className='flex gap-2 items-center mt-2 footer-text'><img className='h-[15px] bg-white rounded-full' src={linkedin} alt="Likedin logo"/><p className='text-[#a1a1aa] text-sm'>@CS — Ticket System</p></div>
-                <div className='flex gap-2 items-center mt-2 footer-text'><img className='h-[15px]' src={fb} alt="Fb logo"/><p className='text-[#a1a1aa] text-sm'>@CS — Ticket System</p></div>
-                <div className='flex gap-2 items-center mt-2 footer-text'><img className='h-[15px]' src={email} alt="email logo"/><p className='text-[#a1a1aa] text-sm'>support@cst.com</p></div>
+                <div className='footer-here'>
+                <div className='flex gap-2 items-center mt-2'><img className='h-[15px] bg-white rounded-full' src={x} alt="X logo"/><p className='text-[#a1a1aa] text-sm'>@CS — Ticket System</p></div>
+                <div className='flex gap-2 items-center mt-2'><img className='h-[15px] bg-white rounded-full' src={linkedin} alt="Likedin logo"/><p className='text-[#a1a1aa] text-sm'>@CS — Ticket System</p></div>
+                <div className='flex gap-2 items-center mt-2'><img className='h-[15px]' src={fb} alt="Fb logo"/><p className='text-[#a1a1aa] text-sm'>@CS — Ticket System</p></div>
+                <div className='flex gap-2 items-center mt-2'><img className='h-[15px]' src={email} alt="email logo"/><p className='text-[#a1a1aa] text-sm'>support@cst.com</p></div>
+                </div>
+                
             </div>
         </div>
         <div>

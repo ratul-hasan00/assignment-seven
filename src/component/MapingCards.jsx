@@ -10,7 +10,7 @@ const MapingCards = ({cards,onClick}) => {
         
 
     return (
-         <div className='card-card max-w-[440px] p-2 shadow-xl rounded-md' onClick={onClick}>
+         <div className='primary-click card-card max-w-[440px] p-2 shadow-xl rounded-md' onClick={onClick}>
             
                         <div className='flex justify-between items-center'>
                             <h1 className='cards-title font-semibold text-xl'>{cards.title}</h1>

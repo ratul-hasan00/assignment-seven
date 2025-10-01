@@ -11,9 +11,10 @@ const fetchCard = async () => {
   const res = await fetch("/public/customer.json")
   return res.json()
 }
+const cardPromise = fetchCard()
 
 function App() {
-  const cardPromise = fetchCard()
+  
   const [inProgressCount, setInProgressCount] = useState(0);
   const [resolvedCount, setResolvedCount] = useState(0);
   

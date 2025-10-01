@@ -7,7 +7,8 @@ import './cards.css'
 
 const Card = ({cardPromise,setInProgressCount,setResolvedCount}) => {
 
-    const cardDetails = use(cardPromise)
+    const data = use(cardPromise)
+    const [cardDetails,setCardDetails] = useState(data);
     const [selectedTitle,setSelectedTitle] = useState([]);
     const [resolvedTasks, setResolvedTasks] = useState([]);
 
@@ -20,14 +21,14 @@ return (
                     {
                     cardDetails.map((cards,id)=><MapingCards key={id} cards={cards} onClick={() =>{setSelectedTitle(titles=>[...titles,cards.title]);
                       setInProgressCount(prog => prog + 1);
-                       toast.success("In Progress")}}></MapingCards>)
+                       toast.success("In Progress...")}}></MapingCards>)
                     }
                 </div>
            
             </div>
 
             <div>
-            <div className='bg-white shadow-xl p-2 rounded-xl'>
+            <div className='bg-white shadow-xl p-2 rounded-xl progress-status-div'>
               <p className='customer-ticket text-2xl font-semibold mb-3'>Task Status</p>
 
               {
@@ -44,11 +45,17 @@ return (
                  let newTasks = [...selectedTitle];
                  newTasks.splice(id,1);
                  setSelectedTitle(newTasks);
+                 toast.success("Completed!");
                  setInProgressCount((count)=> count-1);
                  setResolvedTasks((resolved)=>[...resolved,titless]);
                  setResolvedCount((setResolved)=>setResolved+1);
+                 setCardDetails(prev => {
+                      const updated = [...prev];
+                      updated.splice(id, 1); 
+                        return updated;
+                        });
                  
-                }} className='px-20 py-1 rounded-md bg-[#02a53b] text-white text-sm font-semibold'>Complete</button>
+                }} className='primary-click px-20 py-1 rounded-md bg-[#02a53b] text-white text-sm font-semibold'>Complete</button>
               </div>
 
                 )))
@@ -56,7 +63,7 @@ return (
             </div>
 
 
-            <div className='mt-3 bg-white shadow-xl p-2 rounded-xl'>
+            <div className='mt-3 bg-white shadow-xl p-2 rounded-xl progress-status-div'>
               <p className='customer-ticket text-2xl font-semibold mb-3'>Resolved Task</p>
               {
                 resolvedTasks.length===0?(
@@ -74,7 +81,8 @@ return (
                                 newResolved.splice(id,1);
                                 setResolvedTasks(newResolved);
                                 setResolvedCount((subs)=>subs-1);
-                              }} className='text-[#627382] text-xs'>Click to Remove</p>
+                                toast.success("Removed From Resolved Task!")
+                              }} className='primary-click text-[#627382] text-xs'>Click to Remove</p>
                         </div>
                         </div>
                       ))

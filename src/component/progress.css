@@ -1,13 +1,14 @@
 @media screen and (max-width: 576px){
     .prog-container{
         display: block;
-        margin-top: 15px;
-        margin-left: 5px;
+        margin-top: 25px;
+        width: auto;
     }
     .prog-card{
         width: 350px;
         height: 150px;
-        margin-top: 10px;
+        margin: auto;
+        margin-bottom: 20px;
     }
     .prog-img{
         width: 120px;

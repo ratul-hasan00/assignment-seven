@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify';
 
 
 const fetchCard = async () => {
-  const res = await fetch("/public/customer.json")
+  const res = await fetch("/customer.json")
   return res.json()
 }
 const cardPromise = fetchCard()
@@ -25,7 +25,7 @@ function App() {
 
       <ProgressResolved resolvedCount={resolvedCount} inProgressCount={inProgressCount}></ProgressResolved>
 
-      <Suspense fallback={<div className="flex justify-center my-20"><span class="loading loading-infinity loading-xl"></span></div>}>
+      <Suspense fallback={<div className="flex justify-center my-20"><span className="loading loading-infinity loading-xl"></span></div>}>
         <Card cardPromise={cardPromise} setInProgressCount={setInProgressCount} setResolvedCount={setResolvedCount}></Card>
       </Suspense>
 

@@ -19,7 +19,7 @@ return (
                 <p className='customer-ticket text-2xl font-semibold mb-2'>Customer Tickets</p>
                 <div className='card-cards grid grid-cols-2 gap-10'>
                     {
-                    cardDetails.map((cards,id)=><MapingCards key={id} cards={cards} onClick={() =>{setSelectedTitle(titles=>[...titles,cards.title]);
+                    cardDetails.map((cards)=><MapingCards key={cards.id} cards={cards} onClick={() =>{setSelectedTitle(titles=>[...titles,cards.title]);
                       setInProgressCount(prog => prog + 1);
                        toast.success("In Progress...")}}></MapingCards>)
                     }
